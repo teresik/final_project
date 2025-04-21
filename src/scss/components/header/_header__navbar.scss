@@ -2,12 +2,17 @@
 
 .header__navbar {
   &-list {
-    display: grid;
-    justify-content: end;
+    @include md-min {
+      display: grid;
+      justify-content: end;
 
-    gap: $gap;
-    grid-template-columns: repeat(auto-fit, minmax(40px, max-content));
-    @include unlist(0 (-$gap-sm) 0 0);
+      gap: $gap;
+      grid-template-columns: repeat(auto-fit, minmax(40px, max-content));
+      @include unlist(0 (-$gap-sm) 0 0);
+    }
+    @include md {
+      display: none;
+    }
   }
   &-link {
     display: block;
