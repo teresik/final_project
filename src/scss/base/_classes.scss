@@ -9,6 +9,8 @@
 
 	border-width: 2px;
 	border-style: solid;
+	transition: background-color 0.3s;
+	letter-spacing: 0.1em;
 
 	&:hover {
 		background-color: $color-accent;
