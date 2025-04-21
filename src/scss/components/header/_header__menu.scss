@@ -10,6 +10,10 @@
 	padding: $gap 0;
 
 	&-container {
+		display: grid;
+		align-items: center;
+		grid-template-columns: auto 1fr;
+
 		@extend %container;
 	}
 }

@@ -1,1 +1,19 @@
 @use "../../abstracts" as *;
+
+.header__navbar {
+	&-list {
+		@include unlist;
+
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(40px, max-content));
+		justify-content: end;
+		gap: $gap;
+	}
+	&-link {
+		display: block;
+		padding: $gap $gap-sm;
+		font-size: 1.125rem;
+	}
+	&-item {
+	}
+}
