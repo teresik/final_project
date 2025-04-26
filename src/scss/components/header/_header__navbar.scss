@@ -54,13 +54,13 @@
 			}
 
 			&:nth-child(odd) {
-				left: 0px;
+				left: 0;
 				border-radius: 3px 0 0 3px;
 			}
 
 			&:nth-child(1),
 			&:nth-child(2) {
-				top: 0px;
+				top: 0;
 			}
 
 			&:nth-child(3),
