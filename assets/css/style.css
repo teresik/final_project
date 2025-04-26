@@ -444,6 +444,11 @@ a{
   .header__content-title{
     margin:0 0 33px;
   }
+  .header__menu{
+    background-color:rgba(68, 89, 110, 0.25);
+    -webkit-box-shadow:-3px 3px 20px -10px #000000;
+            box-shadow:-3px 3px 20px -10px #000000;
+  }
   .header__navbar-list{
     display:none;
   }
