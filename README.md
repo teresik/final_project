@@ -35,8 +35,9 @@ GRID-TEMPLATE - це сучасний шаблон веб-сайту, побуд
 ## Як використовувати
 1. **Клонувати репозиторій**
 ``` bash
-git clone https://github.com/username/grid-template.git
-cd grid-template
+https://github.com/teresik/final_project.git
+
+cd final_project
 ```
 1. **Встановити залежності** (якщо ви плануєте модифікувати проект)
 ``` bash
