@@ -1,1 +1,53 @@
 @use "../../abstracts" as *;
+
+.about {
+	background-color: $color-gray-light;
+	&__container {
+		display: grid;
+		gap: $gap-x5;
+		grid-template-columns: 1fr 271px;
+
+		padding-top: $gap-x5;
+		padding-bottom: $gap-x5;
+
+		@extend %container;
+	}
+
+	&__content {
+	}
+
+	&__description {
+		position: relative;
+		letter-spacing: 0.05em;
+		line-height: 1.33333333333;
+		font-size: 1.125rem;
+		text-align: justify;
+
+		&::before {
+			content: "";
+			position: absolute;
+			width: 2px;
+			height: 50%;
+			min-height: 200px;
+			background-color: rgba($color-gray, 0.25);
+			right: -2.5 * $gap;
+			top: 5px;
+		}
+
+		p:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	&__picture {
+	}
+
+	&__image {
+		width: auto;
+		height: auto;
+		max-width: 100%;
+	}
+
+	&__text {
+	}
+}
