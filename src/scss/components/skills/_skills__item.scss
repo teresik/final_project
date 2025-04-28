@@ -1,1 +1,62 @@
 @use "../../abstracts" as *;
+
+.skills__item {
+	position: relative;
+	overflow: hidden;
+
+	&-title {
+		z-index: 1;
+		@include abs-position;
+		margin: 0;
+		letter-spacing: 0.1em;
+		font-size: 1.25rem;
+
+		@include md-min {
+			font-size: 1.25rem;
+		}
+
+		@include md {
+			font-size: 1.125rem;
+		}
+	}
+
+	&-link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		padding: $gap;
+		transition: color 0.3s;
+	}
+
+	&-img {
+		@include abs-position;
+		background-size: cover;
+		background-position: center;
+		transition: transform 0.3s;
+	}
+
+	&-overlay {
+		background-color: rgba($color-primary, 0.8);
+		@include abs-position;
+		transition: opacity 0.3s;
+	}
+
+	&:hover {
+		.skills__item-overlay {
+			opacity: 0.95;
+		}
+		.skills__item-link {
+			color: $color-accent;
+		}
+		.skills__item-img {
+			transform: scale(1.2);
+		}
+	}
+
+	@for $i from 1 through 9 {
+		&:nth-child(#{$i}) {
+			grid-area: a#{$i};
+		}
+	}
+}
