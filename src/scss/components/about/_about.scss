@@ -2,26 +2,36 @@
 
 .about {
 	background-color: $color-gray-light;
+	@extend %section;
+
 	&__container {
 		display: grid;
-		gap: $gap-x5;
-		grid-template-columns: 1fr 271px;
-
-		padding-top: $gap-x5;
-		padding-bottom: $gap-x5;
 
 		@extend %container;
-	}
 
-	&__content {
+		@include lg-min {
+			gap: $gap-x5;
+			grid-template-columns: 1fr 271px;
+		}
+		@include lg-md {
+			gap: $gap-x3;
+			grid-template-columns: 1fr 255px;
+		}
+		@include md-sm {
+			gap: $gap-x2;
+			grid-template-columns: 1fr 175px;
+		}
 	}
 
 	&__description {
 		position: relative;
 		letter-spacing: 0.05em;
 		line-height: 1.33333333333;
-		font-size: 1.125rem;
 		text-align: justify;
+
+		@include md-min {
+			font-size: 1.125rem;
+		}
 
 		&::before {
 			content: "";
@@ -30,8 +40,19 @@
 			height: 50%;
 			min-height: 200px;
 			background-color: rgba($color-gray, 0.25);
-			right: -2.5 * $gap;
 			top: 5px;
+
+			@include lg-min {
+				right: -2.5 * $gap;
+			}
+
+			@include lg-md {
+				right: -1.6 * $gap;
+			}
+
+			@include md-sm {
+				right: -1.2 * $gap;
+			}
 		}
 
 		p:last-of-type {
@@ -40,12 +61,31 @@
 	}
 
 	&__picture {
+		text-align: center;
+
+		@include lg-md {
+			margin-top: $gap-x5;
+		}
+		@include md-sm {
+			margin-top: $gap-x4;
+		}
+		@include sm {
+			margin-top: $gap-x3;
+		}
 	}
 
 	&__image {
 		width: auto;
 		height: auto;
 		max-width: 100%;
+
+		@include sm-min {
+			max-height: 488px;
+		}
+
+		@include sm {
+			max-height: 400px;
+		}
 	}
 
 	&__text {
