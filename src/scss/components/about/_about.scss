@@ -33,25 +33,27 @@
 			font-size: 1.125rem;
 		}
 
-		&::before {
-			content: "";
-			position: absolute;
-			width: 2px;
-			height: 50%;
-			min-height: 200px;
-			background-color: rgba($color-gray, 0.25);
-			top: 5px;
+		@include sm-min {
+			&::before {
+				content: "";
+				position: absolute;
+				width: 2px;
+				height: 50%;
+				min-height: 200px;
+				background-color: rgba($color-gray, 0.1);
+				top: 5px;
 
-			@include lg-min {
-				right: -2.5 * $gap;
-			}
+				@include lg-min {
+					right: -2.5 * $gap;
+				}
 
-			@include lg-md {
-				right: -1.6 * $gap;
-			}
+				@include lg-md {
+					right: -1.6 * $gap;
+				}
 
-			@include md-sm {
-				right: -1.2 * $gap;
+				@include md-sm {
+					right: -1.2 * $gap;
+				}
 			}
 		}
 
