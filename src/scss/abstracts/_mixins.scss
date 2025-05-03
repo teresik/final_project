@@ -3,55 +3,58 @@
 @use "mixins-media" as *;
 
 @mixin visually-hidden {
-	position: absolute;
+  position: absolute;
 
-	overflow: hidden;
-	clip: rect(0 0 0 0);
+  overflow: hidden;
+  clip: rect(0 0 0 0);
 
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	padding: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
 
-	border: 0;
+  border: 0;
 }
 
 @mixin unlist($m: 0, $p: 0) {
-	margin: $m;
-	padding: $p;
+  margin: $m;
+  padding: $p;
 
-	list-style: none;
+  list-style: none;
 }
 
 @mixin abs-position($top: 0, $right: 0, $bottom: 0, $left: 0) {
-	position: absolute;
-	top: $top;
-	right: $right;
-	bottom: $bottom;
-	left: $left;
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
 }
 
 @mixin box-shadow {
-	box-shadow: -3px 3px 20px -10px $color-black;
+  box-shadow: -3px 3px 20px -10px $color-black;
 }
 
 @mixin form-element {
-	display: block;
-	width: 100%;
-	height: 60px;
-	transition: 0.3s;
-	letter-spacing: 0.1em;
-	border: 2px solid transparent;
-	border-bottom-color: rgba($color-white, 0.5);
-	color: rgba($color-white, 0.5);
+  display: block;
 
-	@include lg-min {
-		font-size: 1.125em;
-	}
+  width: 100%;
+  height: 60px;
 
-	&:hover,
-	&:focus {
-		border-color: $color-white;
-		color: $color-white;
-	}
+  transition: 0.3s;
+  letter-spacing: 0.1em;
+
+  color: rgba($color-white, 0.5);
+  border: 2px solid transparent;
+  border-bottom-color: rgba($color-white, 0.5);
+
+  @include lg-min {
+    font-size: 1.125em;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-white;
+    border-color: $color-white;
+  }
 }

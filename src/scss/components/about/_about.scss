@@ -1,95 +1,93 @@
 @use "../../abstracts" as *;
 
 .about {
-	background-color: $color-gray-light;
-	@extend %section;
+  background-color: $color-gray-light;
 
-	&__container {
-		display: grid;
+  @extend %section;
 
-		@extend %container;
+  &__container {
+    display: grid;
 
-		@include lg-min {
-			gap: $gap-x5;
-			grid-template-columns: 1fr 271px;
-		}
-		@include lg-md {
-			gap: $gap-x3;
-			grid-template-columns: 1fr 255px;
-		}
-		@include md-sm {
-			gap: $gap-x2;
-			grid-template-columns: 1fr 175px;
-		}
-	}
+    @extend %container;
+    @include lg-min {
+      gap: $gap-x5;
+      grid-template-columns: 1fr 271px;
+    }
+    @include lg-md {
+      gap: $gap-x3;
+      grid-template-columns: 1fr 255px;
+    }
+    @include md-sm {
+      gap: $gap-x2;
+      grid-template-columns: 1fr 175px;
+    }
+  }
 
-	&__description {
-		position: relative;
-		letter-spacing: 0.05em;
-		line-height: 1.33333333333;
-		text-align: justify;
+  &__description {
+    position: relative;
 
-		@include md-min {
-			font-size: 1.125rem;
-		}
+    text-align: justify;
+    letter-spacing: 0.05em;
 
-		@include sm-min {
-			&::before {
-				content: "";
-				position: absolute;
-				width: 2px;
-				height: 50%;
-				min-height: 200px;
-				background-color: rgba($color-gray, 0.1);
-				top: 5px;
+    line-height: 1.33333333333;
 
-				@include lg-min {
-					right: -2.5 * $gap;
-				}
+    @include md-min {
+      font-size: 1.125rem;
+    }
+    @include sm-min {
+      &::before {
+        position: absolute;
+        top: 5px;
 
-				@include lg-md {
-					right: -1.6 * $gap;
-				}
+        width: 2px;
+        height: 50%;
+        min-height: 200px;
 
-				@include md-sm {
-					right: -1.2 * $gap;
-				}
-			}
-		}
+        content: "";
 
-		p:last-of-type {
-			margin-bottom: 0;
-		}
-	}
+        background-color: rgba($color-gray, 0.1);
 
-	&__picture {
-		text-align: center;
+        @include lg-min {
+          right: -2.5 * $gap;
+        }
+        @include lg-md {
+          right: -1.6 * $gap;
+        }
+        @include md-sm {
+          right: -1.2 * $gap;
+        }
+      }
+    }
 
-		@include lg-md {
-			margin-top: $gap-x5;
-		}
-		@include md-sm {
-			margin-top: $gap-x4;
-		}
-		@include sm {
-			margin-top: $gap-x3;
-		}
-	}
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
 
-	&__image {
-		width: auto;
-		height: auto;
-		max-width: 100%;
+  &__picture {
+    text-align: center;
 
-		@include sm-min {
-			max-height: 488px;
-		}
+    @include lg-md {
+      margin-top: $gap-x5;
+    }
+    @include md-sm {
+      margin-top: $gap-x4;
+    }
+    @include sm {
+      margin-top: $gap-x3;
+    }
+  }
 
-		@include sm {
-			max-height: 400px;
-		}
-	}
+  &__image {
+    width: auto;
+    max-width: 100%;
+    height: auto;
 
-	&__text {
-	}
+    @include sm-min {
+      max-height: 488px;
+    }
+    @include sm {
+      max-height: 400px;
+    }
+  }
 }
