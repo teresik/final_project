@@ -30,10 +30,10 @@
 	}
 
 	&__input {
-		@include form-element;
 		padding: 0.5em 1.875em;
 		background-color: rgba($color-white, 0.05);
 		color: $color-white;
+		@include form-element;
 
 		&::placeholder {
 			color: rgba($color-white, 0.5);
@@ -55,12 +55,12 @@
 	}
 
 	&__btn {
-		@include form-element;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		cursor: pointer;
 		background-color: rgba($color-white, 0.06);
+		@include form-element;
 
 		&:hover,
 		&:focus {

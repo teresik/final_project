@@ -1,2 +1,47 @@
 @use "../../abstracts" as *;
 @use "sass:color";
+
+.posts__item {
+	background-color: $color-gray-light2;
+	transition: background-color 0.3s;
+
+	&:hover {
+		background-color: color.adjust($color-gray-light2, $lightness: -10%);
+
+		img {
+			transform: scale(1.1);
+		}
+	}
+
+	&-link {
+		color: inherit;
+	}
+
+	&-picture {
+		overflow: hidden;
+		height: 300px;
+	}
+
+	&-image {
+		display: block;
+		transition: transform 0.3s;
+	}
+
+	&-content {
+		padding: 1.125em 1.875em;
+		text-align: center;
+		line-height: 1.25;
+	}
+
+	&-title {
+	}
+
+	&-description {
+	}
+
+	@for $i from 1 through 6 {
+		&:nth-of-type(#{$i}) {
+			grid-area: a#{$i};
+		}
+	}
+}
