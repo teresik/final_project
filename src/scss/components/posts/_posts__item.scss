@@ -2,49 +2,47 @@
 @use "sass:color";
 
 .posts__item {
-  transition: background-color 0.3s;
+	transition: background-color 0.3s;
 
-  background-color: $color-gray-light2;
+	background-color: $color-gray-light2;
 
-  &:hover {
-    background-color: color.adjust($color-gray-light2, $lightness: -10%);
+	&:hover {
+		background-color: color.adjust($color-gray-light2, $lightness: -10%);
 
-    img {
-      transform: scale(1.1);
-    }
-  }
+		img {
+			transform: scale(1.1);
+		}
+	}
 
-  &-link {
-    color: inherit;
-  }
+	&-link {
+		color: inherit;
+	}
 
-  &-picture {
-    overflow: hidden;
+	&-picture {
+		overflow: hidden;
 
-    height: 300px;
-  }
+		height: 300px;
+	}
 
-  &-image {
-    display: block;
+	&-image {
+		display: block;
+		transition: transform 0.3s;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 
-    transition: transform 0.3s;
-  }
+	&-content {
+		padding: 1.125em 1.875em;
 
-  &-content {
-    padding: 1.125em 1.875em;
+		text-align: center;
 
-    text-align: center;
+		line-height: 1.25;
+	}
 
-    line-height: 1.25;
-  }
-
-
-
-
-
-  @for $i from 1 through 6 {
-    &:nth-of-type(#{$i}) {
-      grid-area: a#{$i};
-    }
-  }
+	@for $i from 1 through 6 {
+		&:nth-of-type(#{$i}) {
+			grid-area: a#{$i};
+		}
+	}
 }
